@@ -17,6 +17,7 @@ public class SpikeSpawner : MonoBehaviour
     {
         if(a)
         {
+            Debug.Log("Spawner : Spike »ý¼º");
             GameObject spike = Instantiate(SpikePrefab);
             spike.transform.position = transform.position;
             a = false;
