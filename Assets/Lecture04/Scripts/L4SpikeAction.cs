@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class SpikeAction: MonoBehaviour
+public class L4SpikeAction: MonoBehaviour
 {
-    float speed = 5;
+    public float speed = 5;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

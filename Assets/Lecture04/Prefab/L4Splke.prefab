@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8609507642283558980}
   - component: {fileID: 6045888468424271889}
-  - component: {fileID: 4555136143860344634}
   - component: {fileID: 575258933034813972}
   - component: {fileID: 8706914170002461345}
+  - component: {fileID: 8648801057324513617}
   m_Layer: 0
-  m_Name: Splke
+  m_Name: L4Splke
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,18 +93,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4555136143860344634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2306634870490281532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 454aadcaf6f2ba14ea9e82ea5540e464, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Spike
 --- !u!60 &575258933034813972
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -182,3 +170,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8648801057324513617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2306634870490281532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d4620662b5ab544d8586ab1b9f9a5e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::L4SpikeAction
