@@ -1,0 +1,51 @@
+using TMPro;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class L4_1PlayerController : MonoBehaviour
+{
+    Rigidbody2D rb;
+    bool isJumping = true;
+    public float JumpPower = 10.0f;
+
+    public GameObject text;
+    Animator animator;
+    
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        isJumping = true;
+        Debug.Log("Player : isJumping = true");
+        text.SetActive(false);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            Debug.Log("Player : Floor 충돌");
+            isJumping = false;
+            Debug.Log("Player : isJumping = false");
+        }
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            text.SetActive(true);
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Keyboard.current.spaceKey.wasPressedThisFrame && !isJumping)
+        {
+            Debug.Log("Player : 점프(Space Bar Pressed)");
+            animator.Play("PlayerJump", -1, 0f);
+            rb.linearVelocity = new Vector2(0.0f, JumpPower);
+            isJumping=true;
+            Debug.Log("Player : isJumping = true");
+        }
+    }
+}
