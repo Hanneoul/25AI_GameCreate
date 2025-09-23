@@ -27,6 +27,11 @@ public class PlayerController : MonoBehaviour
             isJumping = false;
             Debug.Log("Player : isJumping = false");
         }
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            text.SetActive(true);
+        }
     }
 
     // Update is called once per frame
